@@ -15,7 +15,7 @@
 15 */
 16class Solution {
 17    public boolean isSameTree(TreeNode p, TreeNode q) {
-18      return same(p,q);
+18        return same(p,q);
 19        
 20    }
 21    public boolean same(TreeNode p,TreeNode q){
@@ -25,9 +25,15 @@
 25        if(p==null || q==null){
 26            return false;
 27        }
-28        if(p.val!=q.val){
-29            return false;
-30        }
-31        return same(p.left,q.left) && same(p.right,q.right);
-32    }
-33}
+28        
+29        if(p.val!=q.val){
+30            return false;
+31        }
+32        if(p.val!=q.val){
+33            return false;
+34        }
+35         return same(p.left,q.left) && same(p.right,q.right);
+36    }
+37       
+38    
+39}
